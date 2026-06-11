@@ -1,0 +1,58 @@
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\bin\Debug\net7.0-windows\Pong.exe
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\bin\Debug\net7.0-windows\Pong.deps.json
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\bin\Debug\net7.0-windows\Pong.runtimeconfig.json
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\bin\Debug\net7.0-windows\Pong.dll
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\bin\Debug\net7.0-windows\Pong.pdb
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.GeneratedMSBuildEditorConfig.editorconfig
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfoInputs.cache
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfo.cs
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.csproj.CoreCompileInputs.cache
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.dll
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\refint\Pong.dll
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.pdb
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
+D:\Other\JetBrains\Rider IDE\Solutions\Pong\obj\Debug\net7.0-windows\ref\Pong.dll
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.exe
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.deps.json
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.runtimeconfig.json
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.dll
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.pdb
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.GeneratedMSBuildEditorConfig.editorconfig
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfoInputs.cache
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfo.cs
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.csproj.CoreCompileInputs.cache
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.dll
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\refint\Pong.dll
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.pdb
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
+D:\Miscellaneous\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\ref\Pong.dll
+D:\Programing\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.exe
+D:\Programing\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.deps.json
+D:\Programing\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.runtimeconfig.json
+D:\Programing\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.dll
+D:\Programing\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.pdb
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfoInputs.cache
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfo.cs
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.csproj.CoreCompileInputs.cache
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.dll
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\refint\Pong.dll
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.pdb
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\ref\Pong.dll
+D:\Programing\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.sourcelink.json
+D:\Programming\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.exe
+D:\Programming\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.deps.json
+D:\Programming\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.runtimeconfig.json
+D:\Programming\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.dll
+D:\Programming\JetBrains\Rider\Solutions\Pong\bin\Debug\net7.0-windows\Pong.pdb
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfoInputs.cache
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.AssemblyInfo.cs
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.csproj.CoreCompileInputs.cache
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.sourcelink.json
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.dll
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\refint\Pong.dll
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.pdb
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
+D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\ref\Pong.dll
