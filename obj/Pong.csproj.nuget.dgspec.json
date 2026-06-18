@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\JetBrains\\Rider\\Solutions\\Pong\\Pong.csproj": {}
+    "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\JetBrains\\Rider\\Solutions\\Pong\\Pong.csproj": {
+    "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\JetBrains\\Rider\\Solutions\\Pong\\Pong.csproj",
+        "projectUniqueName": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
         "projectName": "Pong",
-        "projectPath": "D:\\Programming\\JetBrains\\Rider\\Solutions\\Pong\\Pong.csproj",
+        "projectPath": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
         "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\JetBrains\\Rider\\Solutions\\Pong\\obj\\",
+        "outputPath": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,10 +26,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-windows7.0": {
+          "net7.0-windows": {
+            "framework": "net7.0-windows7.0",
             "targetAlias": "net7.0-windows",
             "projectReferences": {}
           }
@@ -44,10 +46,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net7.0-windows7.0": {
+        "net7.0-windows": {
+          "framework": "net7.0-windows7.0",
           "targetAlias": "net7.0-windows",
           "imports": [
             "net461",
@@ -86,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

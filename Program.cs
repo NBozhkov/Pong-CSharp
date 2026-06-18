@@ -10,7 +10,7 @@ public class Frame : Form
     
     public Frame()
     {
-        Icon = Icon.ExtractAssociatedIcon(Path.GetDirectoryName(stackFrame.GetFileName()) + "\\Images\\PongIcon.ico");
+        Icon = Icon.ExtractAssociatedIcon(Environment.CurrentDirectory + "\\Images\\PongIcon.ico");
         StartPosition = FormStartPosition.Manual;
         Location = new Point(200, 100);
         ClientSize = new Size(BackEnd.frWidth, BackEnd.frHeight);

@@ -1,15 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>WinExe</OutputType>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net7.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyTitle>Pong-C#</AssemblyTitle>
+        <ApplicationIcon>Images\PongIcon.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Images\" />
+      <Content Include="Images\PongIcon.ico">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

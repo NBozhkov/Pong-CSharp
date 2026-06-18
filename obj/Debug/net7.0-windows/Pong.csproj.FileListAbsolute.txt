@@ -56,3 +56,21 @@ D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\refint\Po
 D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.pdb
 D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
 D:\Programming\JetBrains\Rider\Solutions\Pong\obj\Debug\net7.0-windows\ref\Pong.dll
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Pong.exe
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Pong.deps.json
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Pong.runtimeconfig.json
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Pong.dll
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Pong.pdb
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Frame.resources
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.csproj.GenerateResource.cache
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.AssemblyInfoInputs.cache
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.AssemblyInfo.cs
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.sourcelink.json
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.dll
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\refint\Pong.dll
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.pdb
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\Pong.genruntimeconfig.cache
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\obj\Debug\net7.0-windows\ref\Pong.dll
+C:\Users\nicol\Documents\Visual Studio 18\Video Games Projects\Pong-CSharp\bin\Debug\net7.0-windows\Images\PongIcon.ico
