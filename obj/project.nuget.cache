@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SrJuegMZk28=",
+  "dgSpecHash": "kLJmn+3RG7g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",

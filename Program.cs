@@ -5,10 +5,13 @@ using Timer = System.Timers.Timer;
 
 public class Frame : Form
 {
-    private StackFrame stackFrame = new StackTrace(new StackFrame(true)).GetFrame(0);
-    public ActionPanel panel = new();
-    
-    public Frame()
+    public ActionPanel panel;
+
+
+
+
+
+    public Frame(Size ballSize_def, PointF ballPos_def, Size blueSize_def, Point bluePos_def, Size redSize_def, Point redPos_def)
     {
         Icon = Icon.ExtractAssociatedIcon(Environment.CurrentDirectory + "\\Images\\PongIcon.ico");
         StartPosition = FormStartPosition.Manual;
@@ -18,6 +21,11 @@ public class Frame : Form
         KeyPreview = true;
         
         Controls.Add(panel);
+
+
+
+
+
     }
     
     protected override void OnKeyDown(KeyEventArgs e) => MarkSelectedKeys(e, true);
@@ -36,21 +44,35 @@ public class Frame : Form
 
     public class ActionPanel : Panel
     {
-        public ActionPanel()
+        public ActionPanel(Size ballSize_def, PointF ballPos_def, Size blueSize_def, Point bluePos_def, Size redSize_def, Point redPos_def)
         {
+            ballSize = ballSize_def;
+            ballPos = ballPos_def;
+            blueSize = blueSize_def;
+            bluePos = bluePos_def;
+            redSize = redSize_def;
+            redPos = redPos_def;
+
+
             Size = new Size(BackEnd.frWidth, BackEnd.frHeight);
             BackColor = Color.SkyBlue;
             DoubleBuffered = true;
         }
-        
+
+        public Size ballSize;
+        public PointF ballPos;
+        public Size blueSize;
+        public Point bluePos;
+        public Size redSize;
+        public Point redPos;
         protected override void OnPaint (PaintEventArgs e)
         {
             base.OnPaint(e);
             SolidBrush brush;
         
-            e.Graphics.FillEllipse(brush = new (Color.Black), BackEnd.ballPos.X, BackEnd.ballPos.Y, BackEnd.ballSize.Width, BackEnd.ballSize.Height);
-            e.Graphics.FillRectangle(brush = new(Color.Blue), BackEnd.bluePos.X, BackEnd.bluePos.Y, BackEnd.blueSize.Width, BackEnd.blueSize.Height);
-            e.Graphics.FillRectangle(brush = new(Color.Red), BackEnd.redPos.X, BackEnd.redPos.Y, BackEnd.redSize.Width, BackEnd.redSize.Height);
+            e.Graphics.FillEllipse(brush = new (Color.Black), ballPos.X, ballPos.Y, ballSize.Width, ballSize.Height);
+            e.Graphics.FillRectangle(brush = new(Color.Blue), bluePos.X, bluePos.Y, blueSize.Width, blueSize.Height);
+            e.Graphics.FillRectangle(brush = new(Color.Red), redPos.X, redPos.Y, redSize.Width, redSize.Height);
         }
     }
     
@@ -58,14 +80,14 @@ public class Frame : Form
 
 class BackEnd
 {
-    public static Size ballSize = new Size(15, 15);
-    public static PointF ballPos;
+    private Size ballSize = new Size(15, 15);
+    private static PointF ballPos;
 
-    public static Size blueSize = new(15, frHeight / 5);
-    public static Point bluePos;
-    public static Size redSize = new(15, frHeight / 5);
-    public static Point redPos;
-    public static bool w, s, up, down;
+    private Size blueSize = new(15, frHeight / 5);
+    private Point bluePos;
+    private Size redSize = new(15, frHeight / 5);
+    private Point redPos;
+    private bool w, s, up, down;
 
     private Frame frame = new();
     public const int frWidth = 900, frHeight = 600;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {}
+    "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {
+    "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\Pong.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
+        "projectUniqueName": "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
         "projectName": "Pong",
-        "projectPath": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
+        "projectPath": "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\Pong.csproj",
         "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicol\\Documents\\Visual Studio 18\\Video Games Projects\\Pong-CSharp\\obj\\",
+        "outputPath": "C:\\Users\\nicol\\Documents\\Programming\\Visual Studio\\Video Games Projects\\Pong-CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
