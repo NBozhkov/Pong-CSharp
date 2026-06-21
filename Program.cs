@@ -5,22 +5,27 @@ using Timer = System.Timers.Timer;
 
 public class Frame : Form
 {
-    public ActionPanel panel;
+    public ActionPanel actPanel;
+
+    public const int actPanelWidth = 900, actPanelHeight = 600;
+    private const int scorePanelWidth = 900, scorePanelHeight = 100;
+    private const int frWidth = actPanelWidth, frHeight = actPanelHeight + scorePanelHeight;
 
 
 
 
-
-    public Frame(Size ballSize_def, PointF ballPos_def, Size blueSize_def, Point bluePos_def, Size redSize_def, Point redPos_def)
+    public Frame()
     {
         Icon = Icon.ExtractAssociatedIcon(Environment.CurrentDirectory + "\\Images\\PongIcon.ico");
-        StartPosition = FormStartPosition.Manual;
-        Location = new Point(200, 100);
-        ClientSize = new Size(BackEnd.frWidth, BackEnd.frHeight);
+        StartPosition = FormStartPosition.CenterScreen;
+        //Location = new Point(200, 100);
+        ClientSize = new Size(frWidth, frHeight);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         KeyPreview = true;
-        
-        Controls.Add(panel);
+
+        actPanel = new();
+        actPanel.Size = new Size(actPanelWidth, actPanelHeight);
+        Controls.Add(actPanel);
 
 
 
@@ -30,40 +35,35 @@ public class Frame : Form
     
     protected override void OnKeyDown(KeyEventArgs e) => MarkSelectedKeys(e, true);
     protected override void OnKeyUp(KeyEventArgs e) => MarkSelectedKeys(e, false);
+
+    public bool w, s, up, down;
     private void MarkSelectedKeys(KeyEventArgs e, bool b)
     {
         if(e.KeyCode == Keys.W)
-            BackEnd.w = b;
+            w = b;
         if(e.KeyCode == Keys.S)
-            BackEnd.s = b;
+            s = b;
         if(e.KeyCode == Keys.Up)
-            BackEnd.up = b;
+            up = b;
         if(e.KeyCode == Keys.Down)
-            BackEnd.down = b;
+            down = b;
     }
 
     public class ActionPanel : Panel
     {
-        public ActionPanel(Size ballSize_def, PointF ballPos_def, Size blueSize_def, Point bluePos_def, Size redSize_def, Point redPos_def)
+        public ActionPanel()
         {
-            ballSize = ballSize_def;
-            ballPos = ballPos_def;
-            blueSize = blueSize_def;
-            bluePos = bluePos_def;
-            redSize = redSize_def;
-            redPos = redPos_def;
 
-
-            Size = new Size(BackEnd.frWidth, BackEnd.frHeight);
+            Size = new Size(actPanelWidth, actPanelHeight);
             BackColor = Color.SkyBlue;
             DoubleBuffered = true;
         }
 
-        public Size ballSize;
+        public Size ballSize { get; private set; } = new Size(15, 15);
         public PointF ballPos;
-        public Size blueSize;
+        public Size blueSize { get; private set; } = new(15, actPanelHeight / 5);
         public Point bluePos;
-        public Size redSize;
+        public Size redSize { get; private set; } = new (15, actPanelHeight / 5); 
         public Point redPos;
         protected override void OnPaint (PaintEventArgs e)
         {
@@ -80,20 +80,11 @@ public class Frame : Form
 
 class BackEnd
 {
-    private Size ballSize = new Size(15, 15);
-    private static PointF ballPos;
-
-    private Size blueSize = new(15, frHeight / 5);
-    private Point bluePos;
-    private Size redSize = new(15, frHeight / 5);
-    private Point redPos;
-    private bool w, s, up, down;
 
     private Frame frame = new();
-    public const int frWidth = 900, frHeight = 600;
 
-    private const float distPerFrame = 10; //total velocity
-    private PointF ballMoveDist; //velocity in each axis (assigned mathematically)
+    private const float distPerFrame = 10; //the constant velocity of the ball
+    private PointF ballMoveDist; //velocity in each axis (calculated automatically)
     private int ballXAxis = 1;
     private Random random = new ();
 
@@ -120,7 +111,7 @@ class BackEnd
 
         newRoundXAxis *= -1;
         SetDefaultParameters();
-        frame.panel.Refresh();
+        frame.actPanel.Refresh();
 
         Thread.Sleep(1000);
         
@@ -131,10 +122,10 @@ class BackEnd
     {
         ballXAxis = newRoundXAxis;
         ballMoveDist = RandomCourseAssign(1);
-        ballPos = new((frWidth - ballSize.Width) / 2, (frHeight - ballSize.Height) / 2);
+        frame.actPanel.ballPos = new((Frame.actPanelWidth - frame.actPanel.ballSize.Width) / 2, (Frame.actPanelHeight - frame.actPanel.ballSize.Height) / 2);
         
-        bluePos = new(0, (frHeight - blueSize.Height) / 2);
-        redPos = new(frWidth - redSize.Width, (frHeight - redSize.Height) / 2);
+        frame.actPanel.bluePos = new(0, (Frame.actPanelHeight - frame.actPanel.blueSize.Height) / 2);
+        frame.actPanel.redPos = new(Frame.actPanelWidth - frame.actPanel.redSize.Width, (Frame.actPanelHeight - frame.actPanel.redSize.Height) / 2);
     }
 
     private PointF RandomCourseAssign(float slowDown)
@@ -146,8 +137,8 @@ class BackEnd
     {
         ballXAxis *= -1;
         
-        int halfTailSize = (blueSize.Height + ballSize.Height) / 2;
-        float ballPosInTail = ballPos.Y + ballSize.Height - tailPos - halfTailSize;
+        int halfTailSize = (frame.actPanel.blueSize.Height + frame.actPanel.ballSize.Height) / 2;
+        float ballPosInTail = frame.actPanel.ballPos.Y + frame.actPanel.ballSize.Height - tailPos - halfTailSize;
         ballPosInTail /= halfTailSize;
         
         ballMoveDist.Y = ballPosInTail * distPerFrame * directionChangeHardness;
@@ -156,25 +147,25 @@ class BackEnd
 
     private void MoveTails()
     {
-        if (w)
+        if (frame.w)
         {
-            if (bluePos.Y - frHeight / 50 > 0) bluePos.Y -= frHeight / 50;
-            else bluePos.Y = 0;
+            if (frame.actPanel.bluePos.Y - Frame.actPanelHeight / 50 > 0) frame.actPanel.bluePos.Y -= Frame.actPanelHeight / 50;
+            else frame.actPanel.bluePos.Y = 0;
         }
-        if (s)
+        if (frame.s)
         {
-            if (bluePos.Y + blueSize.Height + frHeight / 50 < frHeight) bluePos.Y += frHeight / 50;
-            else bluePos.Y = frHeight - blueSize.Height;
+            if (frame.actPanel.bluePos.Y + frame.actPanel.blueSize.Height + Frame.actPanelHeight / 50 < Frame.actPanelHeight) frame.actPanel.bluePos.Y += Frame.actPanelHeight / 50;
+            else frame.actPanel.bluePos.Y = Frame.actPanelHeight - frame.actPanel.blueSize.Height;
         }
-        if (up)
+        if (frame.up)
         {
-            if (redPos.Y - frHeight / 50 > 0) redPos.Y -= frHeight / 50;
-            else redPos.Y = 0;
+            if (frame.actPanel.redPos.Y - Frame.actPanelHeight / 50 > 0) frame.actPanel.redPos.Y -= Frame.actPanelHeight / 50;
+            else frame.actPanel.redPos.Y = 0;
         }
-        if (down)
+        if (frame.down)
         {
-            if (redPos.Y + blueSize.Height + frHeight / 50 < frHeight) redPos.Y += frHeight / 50;
-            else redPos.Y = frHeight - redSize.Height;
+            if (frame.actPanel.redPos.Y + frame.actPanel.redSize.Height + Frame.actPanelHeight / 50 < Frame.actPanelHeight) frame.actPanel.redPos.Y += Frame.actPanelHeight / 50;
+            else frame.actPanel.redPos.Y = Frame.actPanelHeight - frame.actPanel.redSize.Height;
         }
     }
 
@@ -182,56 +173,55 @@ class BackEnd
     {
         MoveTails();
         
-        //checking if the ball colides
+        //checking if the ball collides
         if (ballOutBlue)
         {
-            if (ballPos.X + ballSize.Width < 0)
+            if (frame.actPanel.ballPos.X + frame.actPanel.ballSize.Width < 0)
             {
                 ballOutBlue = false;
                 CreateNewRound();
             }
-            else if (ballPos.X > frWidth / 2) ballOutBlue = false; //to make sure a certain bug doesn't happen 
+            else if (frame.actPanel.ballPos.X > Frame.actPanelWidth / 2) ballOutBlue = false; //to make sure a certain bug doesn't happen 
         }
         else if (ballOutRed)
         {
-            if ( ballPos.X > frWidth )
+            if ( frame.actPanel.ballPos.X > Frame.actPanelWidth )
             {
                 ballOutRed = false;
                 CreateNewRound();
             }
-            else if (ballPos.X < frWidth / 2) ballOutRed = false; //to make sure a certain bug doesn't happen
+            else if (frame.actPanel.ballPos.X < Frame.actPanelWidth / 2) ballOutRed = false; //to make sure a certain bug doesn't happen
 
         }
         
-        else if ( ballPos.X <= blueSize.Width )
+        else if ( frame.actPanel.ballPos.X <= frame.actPanel.blueSize.Width )
         {
-            if (ballPos.Y + ballSize.Height > bluePos.Y && ballPos.Y < bluePos.Y + blueSize.Height)
+            if (frame.actPanel.ballPos.Y + frame.actPanel.ballSize.Height > frame.actPanel.bluePos.Y && frame.actPanel.ballPos.Y < frame.actPanel.bluePos.Y + frame.actPanel.blueSize.Height)
             {
-                ballMoveDist = LogicalCourseAssign(bluePos.Y, 0.8f);
+                ballMoveDist = LogicalCourseAssign(frame.actPanel.bluePos.Y, 0.8f);
             }
             else ballOutBlue = true;
         }
-        else if ( ballPos.X + ballSize.Width >= redPos.X )
+        else if ( frame.actPanel.ballPos.X + frame.actPanel.ballSize.Width >= frame.actPanel.redPos.X )
         {
-            if (ballPos.Y + ballSize.Height > redPos.Y && ballPos.Y < redPos.Y + redSize.Height)
+            if (frame.actPanel.ballPos.Y + frame.actPanel.ballSize.Height > frame.actPanel.redPos.Y && frame.actPanel.ballPos.Y < frame.actPanel.redPos.Y + frame.actPanel.redSize.Height)
             {
-                ballMoveDist = LogicalCourseAssign(redPos.Y, 0.8f);
+                ballMoveDist = LogicalCourseAssign(frame.actPanel.redPos.Y, 0.8f);
             }
             else ballOutRed = true;
         }
         
-        if (ballPos.Y <= 0 || ballPos.Y + ballSize.Height >= frHeight)
+        if (frame.actPanel.ballPos.Y <= 0 || frame.actPanel.ballPos.Y + frame.actPanel.ballSize.Height >= Frame.actPanelHeight  )
             ballMoveDist.Y = -ballMoveDist.Y;
         
         //moving the ball
-        ballPos = new(ballPos.X + ballMoveDist.X, ballPos.Y + ballMoveDist.Y);
+        frame.actPanel.ballPos = new(frame.actPanel.ballPos.X + ballMoveDist.X, frame.actPanel.ballPos.Y + ballMoveDist.Y);
         
-        frame.panel.Refresh();
+        frame.actPanel.Refresh();
     }
 
     private void DelayTimerListener(object sender, ElapsedEventArgs e)
     {
-        Console.WriteLine("gafre");
         delayTimer.Stop();
         timer.Start();
     }
